@@ -13,7 +13,7 @@ app.use(express.json());
 const user = process.env.DB_USER;
 const pass = process.env.DB_PASS;
 
-mongoose.connect(`mongodb+srv://${user}:${pass}@cluster1.hwhoxyx.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(`mongodb+srv://${user}:${pass}@cluster1.hwhoxyx.mongodb.net/morewords?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(() => console.log('Connexion à MongoDB réussie !'))
         .catch(() => console.log('Connexion à MongoDB échouée !'))
 

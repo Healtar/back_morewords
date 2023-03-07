@@ -2,8 +2,10 @@
 const mongoose = require('mongoose');
 
 const wordSchema = mongoose.Schema({
-    mots: { type: Array, required: true },
+    _id: {type: String, required: true},
+    lettre: { type: String, required: true },
+    mots: { type: Array, required: true}
 
 });
 
-module.exports = mongoose.model('Word', wordSchema, 'words');
+module.exports = mongoose.model('Word', wordSchema);
